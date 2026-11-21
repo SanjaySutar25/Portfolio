@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sanjay Sutar | Software & Cloud Engineer</title>
+<meta name="description" content="Portfolio of Sanjay Sutar, a B.Tech CS student building full-stack and cloud projects with React, Node.js, Azure, AWS and Docker.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#0c1220',
+          panel: '#141c2f',
+          edge: '#243049',
+          fog: '#e7ecf6',
+          mute: '#97a4bd',
+          sky: '#5aa9ff',
+          amber: '#ffb454'
+        },
+        fontFamily: {
+          display: ['"Bricolage Grotesque"', 'system-ui', 'sans-serif'],
+          sans: ['"IBM Plex Sans"', 'system-ui', 'sans-serif'],
+          mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace']
+        }
+      }
+    }
+  };
+</script>
+<style>
+  html { scroll-behavior: smooth; scroll-padding-top: 5rem; color-scheme: dark; }
+  body { background: #0c1220; }
+  :focus-visible { outline: 2px solid #5aa9ff; outline-offset: 3px; border-radius: 6px; }
+  .toast { transform: translateY(12px); opacity: 0; pointer-events: none; transition: opacity .2s, transform .2s; }
+  .toast.show { transform: translateY(0); opacity: 1; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body class="font-sans text-fog antialiased">
+
+<!-- Navbar -->
+<header class="sticky top-0 z-40 border-b border-edge bg-ink/90 backdrop-blur">
+  <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-3" aria-label="Main">
+    <a href="#top" class="font-display text-lg font-bold tracking-tight">Sanjay Sutar</a>
+    <ul class="hidden items-center gap-6 text-sm text-mute md:flex">
+      <li><a class="hover:text-fog" href="#projects">Projects</a></li>
+      <li><a class="hover:text-fog" href="#skills">Skills</a></li>
+      <li><a class="hover:text-fog" href="#experience">Experience</a></li>
+      <li><a class="hover:text-fog" href="#education">Education</a></li>
+      <li><a class="hover:text-fog" href="#contact">Contact</a></li>
+    </ul>
+    <a href="./resume.pdf" target="_blank" rel="noopener noreferrer"
+       class="rounded-lg bg-sky px-4 py-2 text-sm font-semibold text-ink hover:bg-white">Open Resume</a>
+  </nav>
+</header>
+
+<main id="top">
+
+<!-- Hero -->
+<section class="mx-auto grid max-w-6xl gap-10 px-5 pb-16 pt-14 md:grid-cols-[1.25fr_1fr] md:items-center md:pt-24">
+  <div>
+    <p class="text-sm text-mute">Hi, I'm</p>
+    <h1 class="mt-1 font-display text-5xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl">Sanjay Sutar</h1>
+    <p class="mt-3 font-display text-2xl font-medium text-sky sm:text-3xl">Software &amp; Cloud Engineer</p>
+    <p class="mt-5 max-w-xl text-base leading-relaxed text-mute">
+      B.Tech Computer Science student who builds full-stack apps with React and Node.js, including AI projects on the Gemini API and LangGraph.
+      Holds six Microsoft Azure certifications and is building CI/CD pipelines in a DevOps and cloud internship.
+    </p>
+
+    <div class="mt-7 flex flex-wrap gap-3">
+      <a href="./resume.pdf" target="_blank" rel="noopener noreferrer"
+         class="rounded-lg bg-sky px-5 py-3 text-sm font-semibold text-ink hover:bg-white">Open Resume</a>
+      <a href="./resume.pdf" download
+         class="rounded-lg border border-edge px-5 py-3 text-sm font-semibold hover:border-sky hover:text-sky">Download Resume</a>
+      <button type="button" data-copy-email
+         class="rounded-lg border border-edge px-5 py-3 text-sm font-semibold hover:border-amber hover:text-amber">Copy Email</button>
+    </div>
+
+    <!-- Social & coding profiles -->
+    <ul class="mt-7 flex items-center gap-3" aria-label="Social and coding profiles">
+      <li>
+        <a href="https://github.com/SanjaySutar25" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub"
+           class="grid h-11 w-11 place-items-center rounded-lg border border-edge text-mute hover:border-sky hover:text-fog">
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.76 2.68 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://linkedin.com/in/sanjay-sutar" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"
+           class="grid h-11 w-11 place-items-center rounded-lg border border-edge text-mute hover:border-sky hover:text-fog">
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://leetcode.com/u/sanjay25sutar" target="_blank" rel="noopener noreferrer" aria-label="LeetCode" title="LeetCode"
+           class="grid h-11 w-11 place-items-center rounded-lg border border-edge text-mute hover:border-sky hover:text-fog">
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6M14 4l-4 16"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="mailto:sanjay25sutar@gmail.com" aria-label="Email" title="Email"
+           class="grid h-11 w-11 place-items-center rounded-lg border border-edge text-mute hover:border-sky hover:text-fog">
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Profile card styled as a config file (the one memorable element) -->
+  <aside class="rounded-xl border border-edge bg-panel p-5 font-mono text-[13px] leading-7 shadow-xl" aria-label="Profile summary">
+    <div class="mb-3 flex items-center gap-2 border-b border-edge pb-3 text-mute">
+      <span class="h-2.5 w-2.5 rounded-full bg-edge"></span><span class="h-2.5 w-2.5 rounded-full bg-edge"></span><span class="h-2.5 w-2.5 rounded-full bg-edge"></span>
+      <span class="ml-2">profile.yaml</span>
+    </div>
+    <p><span class="text-sky">name:</span> Sanjay Sutar</p>
+    <p><span class="text-sky">location:</span> Vadodara, Gujarat, India</p>
+    <p><span class="text-sky">targets:</span></p>
+    <p class="pl-4">- Cloud Engineer</p>
+    <p class="pl-4">- DevOps Engineer</p>
+    <p class="pl-4">- Software Engineer</p>
+    <p><span class="text-sky">certifications:</span> <span class="text-amber">6</span> <span class="text-mute"># Microsoft Azure</span></p>
+    <p><span class="text-sky">now:</span> DevOps &amp; Cloud Intern</p>
+    <p><span class="text-sky">graduating:</span> <span class="text-amber">2027</span></p>
+    <p><span class="text-sky">status:</span> <span class="text-emerald-400">open_to_work</span></p>
+  </aside>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="mx-auto max-w-6xl px-5 py-14">
+  <h2 class="font-display text-3xl font-bold tracking-tight">Projects</h2>
+  <p class="mt-2 max-w-xl text-mute">Cloud tooling, AI integrations and a team-built web app.</p>
+
+  <div class="mt-8 grid gap-5 md:grid-cols-3">
+    <article class="flex flex-col rounded-xl border border-edge bg-panel p-6">
+      <h3 class="font-display text-xl font-bold">Cloud Cost Optimizer</h3>
+      <p class="mt-3 flex-1 text-sm leading-relaxed text-mute">
+        A dashboard that scans AWS resources, flags idle or over-provisioned services and recommends cost savings. Resource scanning runs serverless on AWS Lambda.
+      </p>
+      <ul class="mt-4 flex flex-wrap gap-2 text-xs font-mono">
+        <li class="rounded-md bg-ink px-2 py-1 text-sky">React</li>
+        <li class="rounded-md bg-ink px-2 py-1 text-sky">Node.js</li>
+        <li class="rounded-md bg-ink px-2 py-1 text-sky">AWS SDK</li>
+        <li class="rounded-md bg-ink px-2 py-1 text-sky">Lambda</li>
+      </ul>
+      <div class="mt-5 flex gap-3 text-sm font-semibold">
+        <a href="#YOUR_COST_OPTIMIZER_GITHUB_REPO_URL" target="_blank" rel="noopener noreferrer" class="rounded-lg border border-edge px-3 py-2 hover:border-sky hover:text-sky">GitHub Repo</a>
+        <a href="#YOUR_COST_OPTIMIZER_LIVE_DEMO_URL" target="_blank" rel="noopener noreferrer" class="rounded-lg bg-fog px-3 py-2 text-ink hover:bg-white">Live Demo</a>
+      </div>
+    </article>
+
+    <article class="flex flex-col rounded-xl border border-edge bg-panel p-6">
+      <h3 class="font-display text-xl font-bold">LogiAlloc: AI Logistics Allocation</h3>
+      <p class="mt-3 flex-1 text-sm leading-relaxed text-mute">
+        A platform that uses the Gemini API to automate shipment allocation, fleet planning and route suggestions, with fleet management and real-time logistics monitoring on a Node.js backend.
+      </p>
+      <ul class="mt-4 flex flex-wrap gap-2 text-xs font-mono">
+        <li class="rounded-md bg-ink px-2 py-1 text-sky">Node.js</li>
+        <li class="rounded-md bg-ink px-2 py-1 text-sky">JavaScript</li>
+        <li class="rounded-md bg-ink px-2 py-1 text-sky">Gemini API</li>
+      </ul>
+      <div class="mt-5 flex gap-3 text-sm font-semibold">
+        <a href="#YOUR_LOGIALLOC_GITHUB_REPO_URL" target="_blank" rel="noopener noreferrer" class="rounded-lg border border-edge px-3 py-2 hover:border-sky hover:text-sky">GitHub Repo</a>
+        <a href="#YOUR_LOGIALLOC_LIVE_DEMO_URL" target="_blank" rel="noopener noreferrer" class="rounded-lg bg-fog px-3 py-2 text-ink hover:bg-white">Live Demo</a>
+      </div>
+    </article>
+
+    <article class="flex flex-col rounded-xl border border-edge bg-panel p-6">
+      <h3 class="font-display text-xl font-bold">Style-A-Silhouette</h3>
+      <p class="mt-1 text-xs text-amber">Team of 4</p>
+      <p class="mt-3 flex-1 text-sm leading-relaxed text-mute">
+        A smart styling and wardrobe assistant. It captures a photo through the browser camera, uploads it to an Express backend and gives spoken styling feedback. I helped extend it with a Python AI agent for fashion recommendations and wardrobe search.
+      </p>
+      <ul class="mt-4 flex flex-wrap gap-2 text-xs font-mono">
+        <li class="rounded-md bg-ink px-2 py-1 text-sky">React</li>
+        <li class="rounded-md bg-ink px-2 py-1 text-sky">Node.js</li>
+        <li class="rounded-md bg-ink px-2 py-1 text-sky">Express</li>
+        <li class="rounded-md bg-ink px-2 py-1 text-sky">Python</li>
+        <li class="rounded-md bg-ink px-2 py-1 text-sky">LangGraph</li>
+      </ul>
+      <div class="mt-5 flex gap-3 text-sm font-semibold">
+        <a href="#YOUR_STYLE_A_SILHOUETTE_GITHUB_REPO_URL" target="_blank" rel="noopener noreferrer" class="rounded-lg border border-edge px-3 py-2 hover:border-sky hover:text-sky">GitHub Repo</a>
+        <a href="#YOUR_STYLE_A_SILHOUETTE_LIVE_DEMO_URL" target="_blank" rel="noopener noreferrer" class="rounded-lg bg-fog px-3 py-2 text-ink hover:bg-white">Live Demo</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="mx-auto max-w-6xl px-5 py-14">
+  <h2 class="font-display text-3xl font-bold tracking-tight">Skills</h2>
+  <div class="mt-8 grid gap-5 md:grid-cols-3">
+    <div class="rounded-xl border border-edge bg-panel p-6">
+      <h3 class="font-display text-lg font-bold">Languages</h3>
+      <ul class="mt-4 flex flex-wrap gap-2 text-sm">
+        <li class="rounded-md border border-edge px-3 py-1">Python</li>
+        <li class="rounded-md border border-edge px-3 py-1">Java</li>
+        <li class="rounded-md border border-edge px-3 py-1">JavaScript</li>
+        <li class="rounded-md border border-edge px-3 py-1">SQL</li>
+        <li class="rounded-md border border-edge px-3 py-1">HTML</li>
+        <li class="rounded-md border border-edge px-3 py-1">CSS</li>
+      </ul>
+    </div>
+    <div class="rounded-xl border border-edge bg-panel p-6">
+      <h3 class="font-display text-lg font-bold">Cloud &amp; DevOps</h3>
+      <ul class="mt-4 flex flex-wrap gap-2 text-sm">
+        <li class="rounded-md border border-edge px-3 py-1">Azure</li>
+        <li class="rounded-md border border-edge px-3 py-1">AWS</li>
+        <li class="rounded-md border border-edge px-3 py-1">Docker</li>
+        <li class="rounded-md border border-edge px-3 py-1">Kubernetes</li>
+        <li class="rounded-md border border-edge px-3 py-1">GitHub Actions</li>
+        <li class="rounded-md border border-edge px-3 py-1">Terraform</li>
+        <li class="rounded-md border border-edge px-3 py-1">Grafana</li>
+      </ul>
+    </div>
+    <div class="rounded-xl border border-edge bg-panel p-6">
+      <h3 class="font-display text-lg font-bold">Backend &amp; Tools</h3>
+      <ul class="mt-4 flex flex-wrap gap-2 text-sm">
+        <li class="rounded-md border border-edge px-3 py-1">React</li>
+        <li class="rounded-md border border-edge px-3 py-1">Node.js</li>
+        <li class="rounded-md border border-edge px-3 py-1">Express</li>
+        <li class="rounded-md border border-edge px-3 py-1">Flask</li>
+        <li class="rounded-md border border-edge px-3 py-1">FastAPI</li>
+        <li class="rounded-md border border-edge px-3 py-1">REST APIs</li>
+        <li class="rounded-md border border-edge px-3 py-1">Gemini API</li>
+        <li class="rounded-md border border-edge px-3 py-1">LangGraph</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Experience -->
+<section id="experience" class="mx-auto max-w-6xl px-5 py-14">
+  <h2 class="font-display text-3xl font-bold tracking-tight">Experience</h2>
+  <article class="mt-8 rounded-xl border border-edge bg-panel p-6">
+    <div class="flex flex-wrap items-baseline justify-between gap-2">
+      <h3 class="font-display text-xl font-bold">DevOps &amp; Cloud Engineer Intern</h3>
+      <p class="text-sm text-mute">Sep 2026 to present</p>
+    </div>
+    <p class="mt-1 text-sky">ZeTheta Algorithms Pvt. Ltd.</p>
+    <ul class="mt-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-mute">
+      <li>Building a zero-downtime CI/CD pipeline for a banking-style application using Docker, Kubernetes and GitHub Actions.</li>
+      <li>Automating cloud setup on Azure and AWS with Terraform, and monitoring deployments with Grafana.</li>
+    </ul>
+  </article>
+</section>
+
+<!-- Education & Certifications -->
+<section id="education" class="mx-auto max-w-6xl px-5 py-14">
+  <h2 class="font-display text-3xl font-bold tracking-tight">Education &amp; Certifications</h2>
+  <div class="mt-8 grid gap-5 md:grid-cols-[1fr_1.4fr]">
+    <article class="rounded-xl border border-edge bg-panel p-6">
+      <h3 class="font-display text-xl font-bold">B.Tech in Computer Science Engineering</h3>
+      <p class="mt-2 text-sky">Parul University, Vadodara</p>
+      <p class="mt-1 text-sm text-mute">2023 to 2027 (expected graduation)</p>
+      <p class="mt-4 text-sm text-mute">Microsoft Industrial Embedded Program (IEP)</p>
+      <p class="mt-1 text-sm text-mute">CGPA: <span class="font-semibold text-fog">7.52</span></p>
+    </article>
+
+    <article class="rounded-xl border border-edge bg-panel p-6">
+      <h3 class="font-display text-xl font-bold">Microsoft Azure certifications</h3>
+      <ul class="mt-4 grid gap-3 text-sm sm:grid-cols-2">
+        <li class="rounded-lg border border-edge p-3"><span class="block font-semibold">Azure Administrator Associate</span><span class="font-mono text-xs text-mute">AZ-104</span></li>
+        <li class="rounded-lg border border-edge p-3"><span class="block font-semibold">Azure AI Cloud Developer Associate</span><span class="font-mono text-xs text-mute">AI-200</span></li>
+        <li class="rounded-lg border border-edge p-3"><span class="block font-semibold">Azure Fundamentals</span><span class="font-mono text-xs text-mute">AZ-900</span></li>
+        <li class="rounded-lg border border-edge p-3"><span class="block font-semibold">AI Fundamentals</span><span class="font-mono text-xs text-mute">AI-900</span></li>
+        <li class="rounded-lg border border-edge p-3"><span class="block font-semibold">Data Fundamentals</span><span class="font-mono text-xs text-mute">DP-900</span></li>
+        <li class="rounded-lg border border-edge p-3"><span class="block font-semibold">Security Fundamentals</span><span class="font-mono text-xs text-mute">SC-900</span></li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="mx-auto max-w-6xl px-5 pb-20 pt-14">
+  <div class="rounded-2xl border border-edge bg-panel p-8 md:p-10">
+    <h2 class="font-display text-3xl font-bold tracking-tight">Let's talk about a role</h2>
+    <p class="mt-2 max-w-xl text-mute">I'm looking for an entry-level Cloud, DevOps or Software Engineer position. Email is the fastest way to reach me.</p>
+    <dl class="mt-6 grid gap-3 text-sm sm:grid-cols-3">
+      <div><dt class="text-mute">Email</dt><dd><a class="hover:text-sky" href="mailto:sanjay25sutar@gmail.com">sanjay25sutar@gmail.com</a></dd></div>
+      <div><dt class="text-mute">Phone</dt><dd><a class="hover:text-sky" href="tel:+918949456401">+91-8949456401</a></dd></div>
+      <div><dt class="text-mute">Location</dt><dd>Vadodara, Gujarat, India</dd></div>
+    </dl>
+    <div class="mt-7 flex flex-wrap gap-3">
+      <button type="button" data-copy-email class="rounded-lg bg-amber px-5 py-3 text-sm font-semibold text-ink hover:bg-white">Copy Email</button>
+      <a href="./resume.pdf" target="_blank" rel="noopener noreferrer" class="rounded-lg bg-sky px-5 py-3 text-sm font-semibold text-ink hover:bg-white">Open Resume</a>
+      <a href="./resume.pdf" download class="rounded-lg border border-edge px-5 py-3 text-sm font-semibold hover:border-sky hover:text-sky">Download Resume</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="border-t border-edge py-6 text-center text-sm text-mute">
+  <p>&copy; <span id="year">2026</span> Sanjay Sutar</p>
+</footer>
+
+<div id="toast" class="toast fixed bottom-6 left-1/2 z-50 -translate-x-1/2 rounded-lg bg-emerald-400 px-4 py-2 text-sm font-semibold text-ink shadow-lg" role="status" aria-live="polite">Copied!</div>
+
+<script>
+  const EMAIL = 'sanjay25sutar@gmail.com';
+  const toast = document.getElementById('toast');
+  let timer;
+
+  function showToast(message) {
+    toast.textContent = message;
+    toast.classList.add('show');
+    clearTimeout(timer);
+    timer = setTimeout(() => toast.classList.remove('show'), 1800);
+  }
+
+  async function copyEmail() {
+    try {
+      await navigator.clipboard.writeText(EMAIL);
+      showToast('Copied!');
+    } catch (err) {
+      const ta = document.createElement('textarea');
+      ta.value = EMAIL;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        document.execCommand('copy');
+        showToast('Copied!');
+      } catch (e) {
+        showToast('Copy failed. Email: ' + EMAIL);
+      }
+      document.body.removeChild(ta);
+    }
+  }
+
+  document.querySelectorAll('[data-copy-email]').forEach(btn => btn.addEventListener('click', copyEmail));
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
